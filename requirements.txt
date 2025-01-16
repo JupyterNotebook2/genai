@@ -3,3 +3,6 @@ panda
 scikit-learn
 matplotlib
 streamlit
+PyPDF2
+nltk
+wordcloud
