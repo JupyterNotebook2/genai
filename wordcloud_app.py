@@ -38,7 +38,7 @@ def main():
         #st.write("WordCloud Background:")
         left,center, right = st.columns([1,2, 1])          
         with center:
-            bg_color = st.color_picker("WordCloud Background:", "#000000")
+            bg_color = st.color_picker("Background:", "#000000")
     with col2:
         width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
     with col3:
