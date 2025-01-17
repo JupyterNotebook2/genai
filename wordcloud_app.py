@@ -36,7 +36,7 @@ def main():
     col1, col2,col3 = st.columns(3)
     with col1:
         #st.write("WordCloud Background:")
-        left,center, right = st.columns([1,2, 1])          
+        left,center, right = st.columns([1,5, 1])          
         with center:
             bg_color = st.color_picker("WordCloud Background:", "#000000")
     with col2:
