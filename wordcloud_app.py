@@ -33,7 +33,7 @@ def main():
     # WordCloud customization
     st.write("#### WordCloud Customization")
     
-    col1, col2,col3 = st.columns(3)
+    col1, col2,col3 = st.columns([1,3,3])
     with col1:
         #st.write("WordCloud Background:")
         left,center, right = st.columns([1,2, 1])          
