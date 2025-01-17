@@ -35,13 +35,11 @@ def main():
     
     col1, col2,col3 = st.columns(3)
     with col1:
-        left, center, right = st.columns([1, 2, 1])
-        top,bottom=st.rows(2)
-        with top:
-            st.write("WordCloud Background:")
-        with bottom:
-            with center:
-                bg_color = st.color_picker("", "#000000")
+        left, right = st.columns([3, 1])
+        with left:
+            st.write("Background:")
+        with right:
+            bg_color = st.color_picker("", "#000000")
     with col2:
         width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
     with col3:
