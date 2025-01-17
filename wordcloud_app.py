@@ -31,12 +31,12 @@ def main():
     # User input text
     user_text = st.text_area("Enter your text:", height=200)
     # WordCloud customization
-        st.write("### WordCloud Customization")
-        bg_color = st.color_picker("Choose a background color for the WordCloud", "#FFFFFF")
+    st.write("### WordCloud Customization")
+    bg_color = st.color_picker("Choose a background color for the WordCloud", "#FFFFFF")
     # Dimensions customization
-        st.write("### Customize WordCloud Dimensions")
-        width = st.number_input("Enter width (in pixels):", min_value=100, max_value=5000, value=1200)
-        height = st.number_input("Enter height (in pixels):", min_value=100, max_value=5000, value=600)
+    st.write("### Customize WordCloud Dimensions")
+    width = st.number_input("Enter width (in pixels):", min_value=100, max_value=5000, value=1200)
+    height = st.number_input("Enter height (in pixels):", min_value=100, max_value=5000, value=600)
 
     if user_text:
         # Preprocess text
