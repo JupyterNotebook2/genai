@@ -40,8 +40,11 @@ def main():
         width = st.slider("Width (in pixels):", min_value=100, max_value=5000, value=1200)
     with col2:
         height = st.slider("Height (in pixels):", min_value=100, max_value=5000, value=600)
+    
 
     if user_text:
+        with st.spinner("Preprocessing text..."):
+            processed_text = preprocess_text(user_text)
         if st.button("Generate WordCloud"):       
             # Generate WordCloud
             with st.spinner("Generating WordCloud..."):
