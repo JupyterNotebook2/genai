@@ -29,17 +29,23 @@ def main():
     st.title("Text Preprocessor and WordCloud Generator")
 
     # User input text
-    user_text = st.text_area("Enter your text:", height=200)
+    user_text = st.text_area("Enter your text:", height=100)
     # WordCloud customization
-    st.write("### WordCloud Customization")
+    st.write("#### WordCloud Customization")
     
     col1, col2,col3 = st.columns(3)
     with col1:
-        bg_color = st.color_picker("WordCloud Background", "#000000")
+        left, center, right = st.columns([1, 2, 1])
+        with center:
+            bg_color = st.color_picker("WordCloud Background", "#000000")
     with col2:
-        width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
+        left, center, right = st.columns([1, 2, 1])
+        with center:
+            width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
     with col3:
-        height = st.slider("Height (in pixels):", min_value=100, max_value=1080, value=600)
+        left, center, right = st.columns([1, 2, 1])
+        with center:
+            height = st.slider("Height (in pixels):", min_value=100, max_value=1080, value=600)
     
 
     if user_text:
