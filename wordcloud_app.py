@@ -32,14 +32,14 @@ def main():
     user_text = st.text_area("Enter your text:", height=200)
     # WordCloud customization
     st.write("### WordCloud Customization")
-    bg_color = st.color_picker("Choose a background color for the WordCloud", "#FFFFFF")
-    # Dimensions customization
-    st.write("### Customize WordCloud Dimensions")
-    col1, col2 = st.columns(2)
+    
+    col1, col2,col3 = st.columns(3)
     with col1:
-        width = st.slider("Width (in pixels):", min_value=100, max_value=5000, value=1200)
+        bg_color = st.color_picker("Choose a background color for the WordCloud", "#000000")
     with col2:
-        height = st.slider("Height (in pixels):", min_value=100, max_value=5000, value=600)
+        width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
+    with col3:
+        height = st.slider("Height (in pixels):", min_value=100, max_value=1080, value=600)
     
 
     if user_text:
