@@ -31,7 +31,7 @@ def main():
     # User input text
     user_text = st.text_area("Enter text to generate WordCloud:", height=100)
     # WordCloud customization
-    st.write("#WordCloud Customization")
+    st.write("# WordCloud Customization")
     
     col1, col2,col3 = st.columns([1,3,3])
     with col1:
