@@ -35,23 +35,21 @@ def main():
     bg_color = st.color_picker("Choose a background color for the WordCloud", "#FFFFFF")
     # Dimensions customization
     st.write("### Customize WordCloud Dimensions")
-    width = st.number_input("Enter width (in pixels):", min_value=100, max_value=5000, value=1200)
-    height = st.number_input("Enter height (in pixels):", min_value=100, max_value=5000, value=600)
+    col1, col2 = st.columns(2)
+    with col1:
+        width = st.slider("Width (in pixels):", min_value=100, max_value=5000, value=1200)
+    with col2:
+        height = st.slider("Height (in pixels):", min_value=100, max_value=5000, value=600)
 
     if user_text:
-        # Preprocess text
-        with st.spinner("Preprocessing text..."):
-            processed_text = preprocess_text(user_text)
-        st.write("### Preprocessed Text:")
-        st.text_area("Processed Text", processed_text, height=150)
-
-        # Generate WordCloud
-        with st.spinner("Generating WordCloud..."):
-            wordcloud = WordCloud(width=width, height=height, max_words=1000, background_color=bg_color).generate(processed_text)
-            plt.figure(figsize=(width/100, height/100))  # Convert pixels to inches for Matplotlib
-            plt.imshow(wordcloud, interpolation='bilinear')
-            plt.axis("off")
-            st.pyplot(plt)
+        if st.button("Generate WordCloud"):       
+            # Generate WordCloud
+            with st.spinner("Generating WordCloud..."):
+                wordcloud = WordCloud(width=width, height=height, max_words=1000, background_color=bg_color).generate(processed_text)
+                plt.figure(figsize=(width/100, height/100))  # Convert pixels to inches for Matplotlib
+                plt.imshow(wordcloud, interpolation='bilinear')
+                plt.axis("off")
+                st.pyplot(plt)
 
 if __name__ == "__main__":
     main()
