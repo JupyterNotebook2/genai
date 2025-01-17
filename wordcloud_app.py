@@ -36,16 +36,13 @@ def main():
     col1, col2,col3 = st.columns(3)
     with col1:
         left, center, right = st.columns([1, 2, 1])
+        st.write("WordCloud Background:")
         with center:
-            bg_color = st.color_picker("WordCloud Background", "#000000")
+            bg_color = st.color_picker("", "#000000")
     with col2:
-        left, center, right = st.columns([1, 2, 1])
-        with center:
-            width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
+        width = st.slider("Width (in pixels):", min_value=100, max_value=1920, value=1200)
     with col3:
-        left, center, right = st.columns([1, 2, 1])
-        with center:
-            height = st.slider("Height (in pixels):", min_value=100, max_value=1080, value=600)
+        height = st.slider("Height (in pixels):", min_value=100, max_value=1080, value=600)
     
 
     if user_text:
