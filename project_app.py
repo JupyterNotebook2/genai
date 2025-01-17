@@ -17,7 +17,7 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 # Load the dataset
-data_path = '/mnt/data/IMDB Dataset.csv'
+data_path = 'https://docs.google.com/spreadsheets/d/1My2DrsY_AJd9GWEe32fuh3Qzx2K-9WSu/edit?usp=drive_link&ouid=110310620693603342833&rtpof=true&sd=true'
 data = pd.read_csv(data_path)
 
 # Preprocess text data
